@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<!-- Lesson x-->
+<!-- Main project-->
 
 
-
-<!-- For more notes in 'inspector' check <html <body>. -->
 
 <!-- 
 <meta name="color-scheme" content="dark"> 
@@ -71,49 +69,49 @@ function startQuiz() { // this will start a quiz where the user can test their k
   }
 }
 
-function checkAnswer(answer, correctAnswers) { // This function checks if the user's aswer is correct.
-  if (!answer) { // (!answer) checks if no answer was written (Cancel or empty input).
-    alert("No answer given."); 
-    return;
+function checkAnswer(answer, correctAnswers) { // This function checks if the user's answer is correct.
+  if (!answer) {
+    alert("No answer given."); // If the user presses cancel or leves the prompt empty, this alert will pop up. 
+    return; // User will be returend to the "main menu".
   }
 
   var lower = answer.toLowerCase();// toLowerCase() method converts a string to lowercase letters. 
-  var correct = false;
+  var correct = false; // Assume the answer is incorrect first
 
-  for (var i = 0; i < correctAnswers.length; i++) {
+  for (var i = 0; i < correctAnswers.length; i++) { 
     if (lower === correctAnswers[i].toLowerCase()) {
-      correct = true;
+      correct = true; // if the asumption above was wrong it changes to true.
     }
   }
 
-  if (correct) {
-    alert(" Correct!");
+  if (correct) { // if it matches
+    alert(" Correct!"); // The program will alert "Correct!" The User can press 
   } else {
-    alert(" Wrong. Correct answer(s): " + correctAnswers.join(", "));
+    alert(" Wrong. Correct answer(s): " + correctAnswers.join(", ")); // The program will display the correct answer(s). But that is not working... Now it shows Glossary[object Object] on the screen (document write) and or the program is broken.,
   }
 }
 
 // ====== MAIN MENU LOOP ======
-while (playing) {
-  var choice = prompt(
-    "Glossary Trainer\n" +
+while (playing) { // pointing to the boolean variable set atop of the pogram under data. When changed to false the program will stop. (line 113 atm)
+  var choice = prompt( // prompt box that will be the main menu of the program. \n is for a new line in the prompt box.
+    "Glossary Trainer\n" + // 
     "1 = Add word\n" +
     "2 = List words\n" +
     "3 = Start quiz\n" +
-    "4 = Quit"
+    "4 = Quit" // the user can choose what to do in the program by entering 1, 2, 3 or 4. At this stage, it is easy to add more options if needed.
   );
 
-  if (choice === "1") {
-    addWord();
+  if (choice === "1") { 
+    addWord(); // pointing to the function found under functions
   } else if (choice === "2") {
-    listWords();
+    listWords(); // pointing to the function listwords, this does not work yet. And i feel stuck. Also i dont know if document.write is the best way to show the words that have been added. But i dont want to dig to deep in to html.... 
   } else if (choice === "3") {
-    startQuiz();
+    startQuiz(); // pointing to the function startquiz, this does work. YEY!!
   } else if (choice === "4") {
-    playing = false;
-    alert("Goodbye!");
+    playing = false; // changes the boolean variable to false and stops the program.
+    alert("Goodbye!"); // alert box that says goodbye when the user quits the program.
   } else {
-    alert("Invalid choice.");
+    alert("Invalid choice."); // if the user enters something else than 1, 2, 3 or 4 this alert will pop up. and the program will go back to the main menu and the enterings made by the user is still there
   }
 }
 
@@ -124,13 +122,14 @@ while (playing) {
 
 <!--
 ==============================
-Notes will be put in readme.md
+Notes will be put in readme
 ==============================
 
 
 
 ==============================
- Lesson Notes for the future 
+Updates will be published on github
 ==============================
 
 -->
+
