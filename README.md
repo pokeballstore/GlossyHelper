@@ -12,7 +12,7 @@
 When I started this project, I had big expectations. I wanted to build something that could store words, test translations, and maybe even save progress. Pretty soon I realised it was better to just focus on getting small things to work first, one step at a time.
 
 GlossyHelper is a small offline glossary app I’m building in JavaScript as part of my programming and English studies.
-It’s not fancy or big — just something I’m creating to learn more about coding and build something useful at the same time.
+It’s not fancy or big, just something I’m creating to learn more about coding and build something useful at the same time.
 
 
 ## Features (so far)
