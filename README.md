@@ -1,27 +1,35 @@
 # GlossyHelper
-Simple offline glossary app built with JavaScript
-
 GlossyHelper
 
-Glossy is a small offline app I’m building in JavaScript as part of my programming and English studies.
-It’s meant to be a simple tool where I can add words, make small quizzes, and save my own glossary lists.
+Simple offline glossary app built with JavaScript
 
+When I started this project, I had big expectations. I wanted to build something that could store words, test translations, and maybe even save progress. Pretty soon I realised it was better to just focus on getting small things to work first — one step at a time.
+
+GlossyHelper is a small offline glossary app I’m building in JavaScript as part of my programming and English studies.
 It’s not fancy or big — just something I’m creating to learn more about coding and build something useful at the same time.
 
- Features (so far)
+Features (so far)
 
-Add words and definitions
+Add words in Swedish and English
 
-Save them locally in the browser
+Test yourself in both directions
 
-See the full list anytime, even offline
+See feedback instantly — “Correct!” or the right answer
 
- Planned ideas
+Simple pop-ups and alerts for interaction
 
-A small quiz/test mode
+Keeps running in a small loop until you choose to quit
+
+It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works — and that feels great.
+
+Problems at the moment: it can't display the wordlist.
+
+Planned ideas
+
+Cleaner layout and design
+
+Handling synonyms and saving data
 
 Import and export of word lists
 
-A cleaner layout
-
-This is a learning project, so the code might change a lot while I experiment and improve.
+For now, I’m just happy that it finally runs without (to much) errors and does most of the things i want.
