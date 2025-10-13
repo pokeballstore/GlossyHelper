@@ -1,6 +1,12 @@
 # GlossyHelper
 GlossyHelper
 
+<p align="center">
+  <img src="logo.png" alt="GlossyHelper Logo" width="200">
+</p>
+
+
+
 Simple offline glossary app built with JavaScript
 
 When I started this project, I had big expectations. I wanted to build something that could store words, test translations, and maybe even save progress. Pretty soon I realised it was better to just focus on getting small things to work first — one step at a time.
