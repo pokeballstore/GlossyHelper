@@ -1,5 +1,5 @@
 # GlossyHelper
-GlossyHelper
+
 
 <p align="center">
   <img src="logo.png" alt="GlossyHelper Logo" width="200">
@@ -27,6 +27,11 @@ Simple pop-ups and alerts for interaction
 Keeps running in a small loop until you choose to quit
 
 It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works — and that feels great.
+
+<p align="center">
+  <img src="main-menu.png" alt="Main menu" width="600">
+</p>
+
 
 Problems at the moment: it can't display the wordlist.
 
