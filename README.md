@@ -26,7 +26,7 @@ Simple pop-ups and alerts for interaction
 
 Keeps running in a small loop until you choose to quit
 
-It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works — and that feels great.
+It’s built only with the basics: prompts for input, alerts for feedback, and text written directly to the page. It’s not pretty, but it works, almost.
 
 <p align="center">
   <img src="main-menu.png" alt="Main menu" width="600">
