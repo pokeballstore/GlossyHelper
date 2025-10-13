@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Lesson x-->
+
+
+
+<!-- For more notes in 'inspector' check <html <body>. -->
+
+<!-- 
+<meta name="color-scheme" content="dark"> 
+-->
+
+<meta name="color-scheme" content="dark">
+
+<!-- Start writing JavaScript code -->
+<script>
+
+// ====== DATA ======
+var glossary = [];  // array of word objects [] brackets are empty and inside there the array will go.
+var playing = true; // Use of boolean to be able to quit the program. (actually i added this for the cause that it was part of the course, and i dont understand how i could use it in a better way)
+
+// ====== FUNCTIONS ======
+function addWord() {  // function is a block of code that performs a specific task // Can we reuse functions? in this case addWord. // it will be number 1 in the "prompt menu"
+  var swe = prompt("Enter a Swedish word:"); // add a word in Swedish first
+
+
+  var eng = prompt("Enter English translation:"); // then add its English translation
+
+
+  // i dont know how to handle synonyms yet
+  // I Think i need to do an array somehow 
+   // if i press cancel it breaks the program...
+  
+  glossary.push({ swedish: swe, english: eng }); // When the user adds a word it goes to swedish or english push adds a new element to the end of an array. But collin dont want to call it element.. dont remember what he said.
+  alert("Word added: " + swe + " -> " + eng); // Can i make symbols? insted instead of ->  use an arrow? or something else that suits better?
+}
+
+function listWords() { // this will list all words that have been added to the glossary on the page in html via document write. for now . // it will be number 2 in the "prompt menu"
+  document.write("Glossary"); // document.write writes directly to the html document. and there i can show all words that have been added.
+  if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
+    document.write("No words added yet."); // This will be written on the page.
+  } else { // else if there are words in the glossary it will write all words that have been added.
+    document.write(glossary); // This is not working. VS code gives me some autofill that i dont understand. 
+
+    
+  }
+}
+
+function startQuiz() { // this will start a quiz where the user can test their knowledge of the words in the glossary. // it will be number 3 in the "prompt menu"
+  if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
+    alert("No words in glossary!"); // This alert will pop up.
+    return; // return stops the function and goes back to the main "prompt menu"
+  }
+
+  // choose how to play the quiz 
+  var direction = prompt("Choose quiz direction:\n1 = Swedish → English\n2 = English → Swedish");
+  if (direction !== "1" && direction !== "2") {
+    alert("Invalid choice.");
+    return;
+  }
+
+  // pick a random word
+  var index = Math.floor(Math.random() * glossary.length); // Math.random() gives a random number between 0 and 1. Math.floor() rounds down to the nearest whole number to make it work with, glossary.length, that gives the number of words in the glossary.
+  var word = glossary[index]; // glossary[index] picks the random word object from the array.
+
+  if (direction === "1") { // If direction is "1", the quiz asks to translate from Swedish to English. If "2", the quiz asks to translate from English to Swedish.
+    var answer = prompt("Translate into English: " + word.swedish); //prompt box asking for the translation of the Swedish word.
+    checkAnswer(answer, word.english); // checkAnswer function checks if the answer is correct.
+  } else {
+    var answer = prompt("Translate into Swedish: " + word.english[0]); // If "2" is chosen by user, the quiz asks to translate from English to Swedish.
+    checkAnswer(answer, [word.swedish]); // checkAnswer function checks if the answer is correct. Same as above but checks the Swedish word list.
+  }
+}
+
+function checkAnswer(answer, correctAnswers) { // This function checks if the user's aswer is correct.
+  if (!answer) { // (!answer) checks if no answer was written (Cancel or empty input).
+    alert("No answer given."); 
+    return;
+  }
+
+  var lower = answer.toLowerCase();// toLowerCase() method converts a string to lowercase letters. 
+  var correct = false;
+
+  for (var i = 0; i < correctAnswers.length; i++) {
+    if (lower === correctAnswers[i].toLowerCase()) {
+      correct = true;
+    }
+  }
+
+  if (correct) {
+    alert(" Correct!");
+  } else {
+    alert(" Wrong. Correct answer(s): " + correctAnswers.join(", "));
+  }
+}
+
+// ====== MAIN MENU LOOP ======
+while (playing) {
+  var choice = prompt(
+    "Glossary Trainer\n" +
+    "1 = Add word\n" +
+    "2 = List words\n" +
+    "3 = Start quiz\n" +
+    "4 = Quit"
+  );
+
+  if (choice === "1") {
+    addWord();
+  } else if (choice === "2") {
+    listWords();
+  } else if (choice === "3") {
+    startQuiz();
+  } else if (choice === "4") {
+    playing = false;
+    alert("Goodbye!");
+  } else {
+    alert("Invalid choice.");
+  }
+}
+
+
+
+
+</script>
+
+<!--
+==============================
+Notes will be put in readme.md
+==============================
+
+
+
+==============================
+ Lesson Notes for the future 
+==============================
+
+-->
