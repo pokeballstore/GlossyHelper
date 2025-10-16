@@ -37,7 +37,7 @@ function listWords() { // this will list all words that have been added to the g
   if (glossary.length === 0) { // if there are no words in the glossary = "=== 0" 
     document.write("No words added yet."); // This will be written on the page.
   } else { // else if there are words in the glossary it will write all words that have been added.
-    document.write(glossary); // This is not working. VS code gives me some autofill that i dont understand. 
+    document.write(glossary); // This is not working. VS code gives me some autofill that i dont understand. Collin said i should use buttons lesson and implement 
 
     
   }
@@ -50,8 +50,8 @@ function startQuiz() { // this will start a quiz where the user can test their k
   }
 
   // choose how to play the quiz 
-  var direction = prompt("Choose quiz direction:\n1 = Swedish → English\n2 = English → Swedish");
-  if (direction !== "1" && direction !== "2") {
+  var direction = prompt("Choose quiz direction:\n1 = Swedish → English\n2 = English → Swedish"); // \n is for a new line in the prompt box. 
+  if (direction !== "1" && direction !== "2") { 
     alert("Invalid choice.");
     return;
   }
